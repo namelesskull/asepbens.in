@@ -15,6 +15,7 @@ const prebuiltHtml =
   );
 
 export const asciiText = `
+
  __    __   ______   __    __  ________   ______   __       
 |  \  /  \ /      \ |  \  |  \|        \ /      \ |  \      
 | $$ /  $$|  $$$$$$\| $$\ | $$ \$$$$$$$$|  $$$$$$\| $$      
@@ -26,7 +27,9 @@ export const asciiText = `
  \$$   \$$  \$$$$$$  \$$   \$$    \$$     \$$$$$$  \$$$$$$$$
                                                             
                                                             
-                                                            `;
+                                                            
+
+`;
 
 export const root = (req: Request, res: Response) => {
   if ((req as any).isCli) {
