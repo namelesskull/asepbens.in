@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from './components/common/header';
 
 const Page: React.FC = () => (
-  <div style={{ fontFamily: 'sans-serif', textAlign: 'center', marginTop: 50 }}>
-    <h1>asepbens.in</h1>
+  <div className='justify-center items-center w-full'>
+    <Header text='Home' />
+    <h1 className='underline text-white'>asepbens.in</h1>
   </div>
 );
 

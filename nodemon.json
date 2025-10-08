@@ -1,0 +1,5 @@
+{
+  "watch": ["controller", "middlewares", "react", "server.ts", "globals.css"],
+  "ext": "ts,tsx,css",
+  "exec": "npx @tailwindcss/cli -i ./globals.css -o ./dist/globals.css && tsc && node ./dist/server.js"
+}
