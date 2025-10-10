@@ -7,5 +7,11 @@
     "jsx": "react",
     "outDir": "dist"
   },
-  "include": ["server.ts", "react/**/*", "middlewares/**/*", "controller/**/*"]
+  "include": [
+    "server.ts",
+    "react/**/*",
+    "middlewares/**/*",
+    "controller/**/*",
+    "ansi/**/*"
+  ]
 }

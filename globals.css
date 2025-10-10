@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+.terminal {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  white-space: pre;
+  line-height: 1.2;
+}

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/server.js",
+    "build:client": "tsc --project tsconfig.client.json",
     "build": "tsc && npx @tailwindcss/cli -i ./globals.css -o ./dist/globals.css",
     "dev": "nodemon"
   },
@@ -15,6 +16,7 @@
   "type": "commonjs",
   "dependencies": {
     "@types/express": "^5.0.3",
+    "ansi-to-html": "^0.7.2",
     "express": "^5.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
@@ -26,6 +28,7 @@
     "nodemon": "^3.1.10",
     "tailwindcss": "^4.1.14",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "undici-types": "^7.16.0"
   }
 }

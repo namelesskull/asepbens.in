@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({ text }: { text: string }) => {
   return (
-    <div className='flex justify-start space-x-2 text-lg'>
+    <div className='flex justify-start space-x-2 text-lg w-fit'>
       <span>{'>'}</span>
       <h1>{text}</h1>
     </div>
