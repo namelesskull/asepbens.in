@@ -1,5 +1,5 @@
 // cSpell:disable
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from './components/common/header';
 import ansiToHTML from './libs/ansi_to_html';
 import { about_me, asep_bensin_image } from '../ansi/ansi';
@@ -22,10 +22,12 @@ const Page: React.FC = () => {
             <span>{typedText}</span>
             <span className='animate-pulse'>█</span>
           </div>
-          <div
-            className='scale-50 origin-top-left terminal'
-            dangerouslySetInnerHTML={{ __html: ansiToHTML(txt) }}
-          />
+          {typedText.length === fullCommand.length && (
+            <div
+              className='scale-50 origin-top-left terminal'
+              dangerouslySetInnerHTML={{ __html: ansiToHTML(txt) }}
+            />
+          )}
         </div>
       </div>
     </div>
