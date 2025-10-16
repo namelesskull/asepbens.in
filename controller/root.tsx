@@ -4,7 +4,7 @@ import { readFile } from 'fs/promises';
 import { about_me, asep_bensin_image } from '../ansi/ansi';
 
 const str_result = asep_bensin_image + about_me;
-const indexHtmlPath = resolve(__dirname, './html/index.html');
+const indexHtmlPath = resolve(__dirname, '../html/index.html');
 
 export const root = async (req: Request, res: Response) => {
   if ((req as any).isCli) {
