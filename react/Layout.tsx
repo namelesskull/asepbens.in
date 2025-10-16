@@ -6,7 +6,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => (
       <title>asepbens.in</title>
       <link href='/globals.css' rel='stylesheet'></link>
     </head>
-    <body className='bg-black text-white flex justify-center'>
+    <body className='bg-gray-800 text-white flex justify-center'>
       <main id='root' className='w-full max-w-4xl'>
         {children}
       </main>

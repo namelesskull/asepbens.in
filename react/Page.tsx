@@ -12,21 +12,33 @@ const Page: React.FC = () => {
   const typedText = useTypewriter(fullCommand, 100);
 
   return (
-    <div className='justify-center items-center w-full h-screen space-y-2'>
+    <div className='justify-center items-center bg-gray-800 w-full h-screen space-y-2'>
       <Header text='Home' />
       <h1 className='underline text-white'>asepbens.in</h1>
       <div className='p-2 border border-white'>
         <div className='inline-block overflow-hidden h-[70vh]'>
           <div className='font-mono text-green-400'>
             <span className='text-green-400'>$ </span>
-            <span>{typedText}</span>
-            <span className='animate-pulse'>█</span>
+            <span>{typedText.text}</span>
+            <span
+              className={`animate-pulse ${
+                typedText.isFinished ? 'hidden' : ''
+              }`}
+            >
+              █
+            </span>
           </div>
-          {typedText.length === fullCommand.length && (
+          {typedText.isFinished && (
             <div
               className='scale-50 origin-top-left terminal'
               dangerouslySetInnerHTML={{ __html: ansiToHTML(txt) }}
             />
+          )}
+          {typedText.isFinished && (
+            <div className='font-mono text-green-400'>
+              <span className='text-green-400'>$ </span>
+              <span className='animate-pulse'>█</span>
+            </div>
           )}
         </div>
       </div>

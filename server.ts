@@ -12,23 +12,7 @@ app.get('/globals.css', (req, res) => {
   });
 });
 
-// app.get('/client.js', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client', 'client.js'), {
-//     headers: { 'Content-Type': 'text/javascript' },
-//   });
-// });
-
-app.use(
-  express.static(path.join(__dirname, 'client'), {
-    extensions: ['js'],
-    maxAge: '1h',
-    setHeaders: (res, path) => {
-      if (path.endsWith('.js')) {
-        res.setHeader('Content-Type', 'application/javascript');
-      }
-    },
-  })
-);
+app.use(express.static(path.join(__dirname, 'html')));
 
 app.use(resolveCLI);
 app.get('/', root);
